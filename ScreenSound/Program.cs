@@ -1,4 +1,5 @@
 ﻿using  ScreenSoud.Modelos;
+using  ScreenSoud.Menus;
 
 Banda Linkin_Park = new Banda("Linkin Park");
 
@@ -54,6 +55,8 @@ void ExibirOpcoesDoMenu()
             AvaliarUmaBanda();
             break;
         case 5:
+            MenusExibirDetalhes menus = new MenusExibirDetalhes();
+            
             ExibirDetalhes();
             break;
         case 0:
