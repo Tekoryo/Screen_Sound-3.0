@@ -1,9 +1,10 @@
 ﻿using  ScreenSoud.Modelos;
 
 Banda Linkin_Park = new Banda("Linkin Park");
-Linkin_Park.AdicionarNota(10);
-Linkin_Park.AdicionarNota(8);
-Linkin_Park.AdicionarNota(6);
+
+Linkin_Park.AdicionarNota(new Avaliacao(10));
+Linkin_Park.AdicionarNota(new Avaliacao(8));
+Linkin_Park.AdicionarNota(new Avaliacao(6));
 Banda The_Beatles = new Banda("The Beatles");
 
 Dictionary<string, Banda> bandasRegistradas = new Dictionary<string, Banda>();
@@ -32,7 +33,7 @@ void ExibirOpcoesDoMenu()
     Console.WriteLine("Digite 3 para mostrar todas as bandas");
     Console.WriteLine("Digite 4 para avaliar uma banda");
     Console.WriteLine("Digite 5 para exibir os detalhes de uma banda");
-    Console.WriteLine("Digite -1 para sair");
+    Console.WriteLine("Digite 0 para sair");
 
     Console.Write("\nDigite a sua opção: ");
     string opcaoEscolhida = Console.ReadLine()!;
@@ -57,6 +58,8 @@ void ExibirOpcoesDoMenu()
             break;
         case 0:
             Console.WriteLine("Tchau tchau :)");
+            Thread.Sleep(2000);
+            Console.Clear();
             break;
         default:
             Console.WriteLine("Opção inválida");
@@ -130,9 +133,9 @@ void AvaliarUmaBanda()
     {
         Banda banda = bandasRegistradas[nomeDaBanda];
         Console.Write($"Qual a nota que a banda {nomeDaBanda} merece: ");
-        int nota = int.Parse(Console.ReadLine()!);
+        Avaliacao nota = Avaliacao.Parse(Console.ReadLine()!);
         banda.AdicionarNota(nota);
-        Console.WriteLine($"\nA nota {nota} foi registrada com sucesso para a banda {nomeDaBanda}");
+        Console.WriteLine($"\nA nota {nota.Nota} foi registrada com sucesso para a banda {nomeDaBanda}");
         Thread.Sleep(2000);
         Console.Clear();
         ExibirOpcoesDoMenu();
