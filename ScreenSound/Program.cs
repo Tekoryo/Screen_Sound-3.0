@@ -47,7 +47,7 @@ void ExibirOpcoesDoMenu()
         case 5:
             ExibirDetalhes();
             break;
-        case -1:
+        case 0:
             Console.WriteLine("Tchau tchau :)");
             break;
         default:
