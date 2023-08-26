@@ -2,12 +2,12 @@
 using ScreenSound.Menus;
 namespace ScreenSound.Menus;
 
-internal class MenuSair
+internal class MenuSair : Menu
 {
-    public void Executar()
+    public override void Executar(Dictionary<string, Banda> bandasRegistradas)
     {
         Console.WriteLine("Tchau tchau :)");
         Thread.Sleep(2000);
-        Console.Clear();
+        base.Executar(bandasRegistradas);
     }
 }
