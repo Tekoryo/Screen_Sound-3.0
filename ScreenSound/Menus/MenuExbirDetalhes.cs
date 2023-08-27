@@ -15,10 +15,13 @@ internal class MenusExibirDetalhes : Menu
         if (bandasRegistradas.ContainsKey(nomeDaBanda))
         {
             Banda banda = bandasRegistradas[nomeDaBanda];
-            Console.WriteLine($"\nA média da banda {nomeDaBanda} é {banda.Media}.");
-            /**
-            * ESPAÇO RESERVADO PARA COMPLETAR A FUNÇÃO
-            */
+            Console.WriteLine($"\nA média da banda {nomeDaBanda} é {banda.Media.ToString("F")}.");
+            Console.WriteLine($"\nDiscografia: ");
+            foreach (Album albuns in banda.Albuns)
+            {
+                Console.WriteLine($"\n {albuns.Nome} -> {albuns.Media.ToString("F")}.");
+            }
+
             Console.WriteLine("Digite uma tecla para votar ao menu principal");
             Console.ReadKey();
             Console.Clear();
