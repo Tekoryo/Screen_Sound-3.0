@@ -1,5 +1,7 @@
-﻿namespace ScreenSoud.Modelos;
-internal class Banda
+﻿using ScreenSound.Modelo;
+
+namespace ScreenSoud.Modelos;
+internal class Banda : IAvaliavel
 {
     private List<Album> albuns = new List<Album>();
     private List<Avaliacao> notas = new List<Avaliacao>();

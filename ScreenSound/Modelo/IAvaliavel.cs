@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ScreenSoud.Modelos;
 
 namespace ScreenSound.Modelo
 {
     internal interface IAvaliavel
     {
+        void AdicionarNota(Avaliacao nota);
+        double Media { get; }
     }
 }
