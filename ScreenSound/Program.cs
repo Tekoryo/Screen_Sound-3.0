@@ -1,15 +1,6 @@
 ﻿using  ScreenSoud.Modelos;
 using  ScreenSoud.Menus;
 using ScreenSound.Menus;
-using OpenAI_API;
-
-var client =new OpenAIAPI("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");
-
-var chat = client.Chat.CreateConversation();
-
-chat.AppendSystemMessage("Resuma a banda U2! em 1 parágrafo. Adote um estilo informal.");
-
-string resposta = await chat.GetResponseFromChatbotAsync();
 
 
 Banda Linkin_Park = new Banda("Linkin Park");
@@ -84,6 +75,6 @@ void ExibirOpcoesDoMenu()
         Console.WriteLine("Opção inválida");
     }
 }
-//ExibirOpcoesDoMenu();
-Console.WriteLine(resposta);
+ExibirOpcoesDoMenu();
+
 

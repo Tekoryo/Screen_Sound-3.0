@@ -15,6 +15,7 @@ internal class MenusExibirDetalhes : Menu
         if (bandasRegistradas.ContainsKey(nomeDaBanda))
         {
             Banda banda = bandasRegistradas[nomeDaBanda];
+            Console.WriteLine(banda.Resumo);
             Console.WriteLine($"\nA média da banda {nomeDaBanda} é {banda.Media.ToString("F")}.");
             Console.WriteLine($"\nDiscografia: ");
             foreach (Album albuns in banda.Albuns)
