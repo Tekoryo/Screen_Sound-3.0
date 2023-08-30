@@ -1,7 +1,6 @@
 ﻿using OpenAI_API;
 using ScreenSoud.Modelos;
-using ScreenSound.Menus;
-using OpenAI_API;
+
 namespace ScreenSound.Menus;
 
 internal class MenuRegistrarBanda : Menu
